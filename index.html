@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+    <link rel="stylesheet" href="all.css">
+
+</head>
+
+<body>
+    <div class="wrap active">
+        <div class="pic">
+            <img src="https://upload.cc/i1/2022/10/15/eIXEsq.png" alt="logo" class="logo">
+            <img src="https://upload.cc/i1/2022/10/15/JRsmX9.png" alt="todolist" class="todolist">
+        </div>
+        <div class="content">
+            <div class="login active">
+                <h2>最實用的線上代辦事項服務</h2>
+
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="請輸入Email">
+                <p>此欄位不可空白</p>
+                <label for="password">密碼</label>
+                <input type="password" id="password" placeholder="請輸入密碼">
+
+                <input type="button" value="登入" class="btn">
+                <a href="#" class="signbtn">註冊帳號</a>
+            </div>
+            <div class="signup ">
+                <h2>註冊帳號</h2>
+                <label for="email">Email</label>
+                <input type="text" id="signupemail" placeholder="請輸入Email">
+
+                <label for="name">您的暱稱</label>
+                <input type="text" id="name" placeholder="請輸入您的暱稱">
+
+                <label for="password">密碼</label>
+                <input type="password" id="signuppassword" placeholder="請輸入6碼以上密碼">
+
+                <label for="password2">再次輸入密碼</label>
+                <input type="password" id="password2" placeholder="請再次輸入密碼">
+                <input type="button" value="註冊帳號" class="btn2">
+                <a href="#" class="loginbtn">登入</a>
+            </div>
+        </div>
+    </div>
+    <div class="wrap2">
+        <div class="header">
+            <h1><img src="https://upload.cc/i1/2022/10/15/eIXEsq.png" alt="logo"></h1>
+            <div class="menu">
+                <p class="name"></p><a href="#" class="signout">登出</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="input">
+                <input type="text" placeholder="請輸入待辦事項" class="txt" />
+                <a href="#" class="btn_add">+</a>
+            </div>
+
+            <div class="card_list active">
+                <ul class="tab">
+                    <li class="active" data-tab="all">全部</li>
+                    <li data-tab="work">待完成</li>
+                    <li data-tab="done">已完成</li>
+                </ul>
+                <div class="cart_content">
+                    <ul class="list">
+
+                    </ul>
+                    <div class="list_footer">
+                        <p class="todolist-num">0 個待完成項目</p>
+                        <a href="#" class="delete-all">清除已完成項目</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="nolist active">
+            <p>目前尚無代辦事項</p>
+            <img src="https://upload.cc/i1/2022/10/15/pts60C.png" alt="">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="all.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,628 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFD370;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+
+.wrap.active {
+    display: flex;
+}
+
+.wrap {
+    margin: 0 auto;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic {
+    margin: 90px;
+}
+
+.logo {
+    display: block;
+    padding-left: 40px;
+}
+
+.todolist {
+    display: block;
+
+    padding-top: 40px;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* 登入 */
+.login.active {
+    display: flex;
+}
+
+.login {
+
+    height: 350px;
+    color: #333333;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+.content h2 {
+
+    margin-bottom: 30px;
+    font-size: 24px;
+
+}
+
+.content label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.content input {
+    width: 300px;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.content .login p {
+    color: #D87355;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.content .btn,
+.content .btn2 {
+    background-color: #333333;
+    width: 130px;
+    height: 47px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 16px;
+    align-self: center;
+    margin: 20px;
+}
+
+.content .btn:hover,
+.content .btn2:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px #000;
+}
+
+.content .signbtn,
+.loginbtn {
+    display: block;
+    width: 80px;
+    align-self: center;
+    color: #333333;
+}
+
+.content .signbtn:hover,
+.loginbtn:hover {
+    color: #fff;
+}
+
+/* 註冊 */
+.content .signup {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.signup.active {
+    display: flex;
+}
+
+.content .signup input {
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 767px) {
+    .todolist {
+        display: none;
+    }
+
+    .wrap {
+        flex-direction: column;
+    }
+
+    .logo {
+        padding: 10px 0;
+    }
+
+    .content h2 {
+        text-align: center;
+    }
+
+    .signup {
+        align-items: center;
+    }
+
+    .content .btn2 {
+        width: 130px;
+    }
+
+}
+
+
+/* 清單 */
+.wrap2 {
+    height: 840px;
+    background-image: linear-gradient(174deg,
+            #ffd370 2%,
+            #ffd370 46%,
+            #ffffff 46%,
+            #ffffff 100%,
+            #e8e8e8 100%);
+    display: none;
+    flex-direction: column;
+
+}
+
+.wrap2.active {
+    display: flex;
+}
+
+
+.header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img {
+    width: 90%;
+}
+
+.menu {
+    display: flex;
+
+}
+
+.name {
+    padding-right: 20px;
+}
+
+.header .signout {
+
+    color: #333333;
+
+}
+
+.header .signout:hover {
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.input {
+    width: 500px;
+    height: 50px;
+    align-self: center;
+}
+
+.input .txt {
+    width: 500px;
+    height: 48px;
+    font-size: 24px;
+    border: 0;
+    border-radius: 15px;
+    position: absolute;
+
+}
+
+.input .btn_add {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: #333333;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    z-index: 2;
+    left: 88%;
+    top: 5px;
+}
+
+.input .btn_add:hover {
+    box-shadow: 0 0 5px #333333;
+}
+
+.container .card_list {
+    width: 500px;
+    display: none;
+    background-color: #FFF;
+    color: #333333;
+    margin-top: 20px;
+    border-radius: 15px;
+
+}
+
+.container .card_list.active {
+    display: block;
+}
+
+.container .tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.container .tab li {
+    width: 33.33%;
+    padding: 20px;
+    color: #333333;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+    border-bottom: 2px solid #aaa;
+}
+
+.container .tab li:hover {
+    border-bottom: 2px solid #333333;
+    cursor: pointer;
+}
+
+.container .tab .active {
+    border-bottom: 2px solid #333333;
+
+}
+
+.container .list_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.container .delete-all {
+    color: #aaa;
+}
+
+.container .delete-all:hover {
+    border-bottom: 1px solid #aaa;
+}
+
+.container .list {
+    position: relative;
+    padding: 30px;
+}
+
+.container .list li {
+    position: relative;
+    padding-right: 40px;
+}
+
+.container .checkbox {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    padding-left: 44px;
+}
+
+.container .checkbox input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+}
+
+.container li #word {
+    position: relative;
+    display: block;
+    left: 0%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 1;
+    border: 0;
+    padding: 10px 0;
+    font-size: 18px;
+    color: #333333;
+}
+
+.container li span {
+    display: block;
+    border-bottom: 1px solid #aaa;
+}
+
+.container li span.edit {
+    border: 1px solid #333333;
+}
+
+.container li span::before {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%) scale(1);
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    border: 1px solid #333333;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.container li span::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 27%;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 0.5rem;
+    border-radius: 1px;
+    border-bottom: 3px solid #ffd370;
+    border-right: 3px solid #ffd370;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+
+.delete {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 0;
+    top: 30%;
+    display: block;
+    opacity: 0;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnLbmedQYhfcVxL4ap5tTQFKgTL0iP07owWHgHbQJIRg&s");
+    background-size: contain;
+}
+
+.pen {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 10%;
+    top: 30%;
+    display: block;
+    opacity: 0;
+    background-image: url("https://www.kindpng.com/picc/m/577-5773509_transparent-pencil-icon-png-pen-icons-png-png.png");
+    background-size: contain;
+}
+
+.list li:hover a.pen {
+    opacity: 1;
+}
+
+.list li:hover a.delete {
+    opacity: 1;
+}
+
+
+.container input:checked~span {
+    color: gray;
+    text-decoration: line-through;
+
+}
+
+.container input:checked~span::before {
+    border-color: transparent;
+    transform: translateY(-50%) scale(0);
+}
+
+.container input:checked~span::after {
+    opacity: 1;
+}
+
+.nolist {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nolist.active {
+    display: none;
+}
+
+.nolist p {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.nolist img {
+
+    width: 240px;
+}
+
+@media (max-width:767px) {
+    .wrap2 {
+        background-image: none;
+    }
+
+    .name {
+        display: none;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .input .txt {
+        width: 90%;
+        left: 5%;
+    }
+
+    .container .card_list {
+        width: 95%;
+    }
+
+    .input .btn_add {
+        left: 80%;
+    }
+
+    .pic {
+        margin: 10%;
+    }
+
+    .header h1 {
+        width: 90%;
+    }
+}
