@@ -72,7 +72,7 @@ function logIn(email, password) {
             axios.defaults.headers.common['Authorization'] = res.headers.authorization;
             user = res.data.nickname;
             alert(`哈囉~${user}~${res.data.message}`);
-            userList.textContent = `${user}的代辦`;
+            userList.textContent = `${user}的待辦`;
             page1.classList.toggle('active');
             page2.classList.toggle('active');
             logInEmail.value = '';
