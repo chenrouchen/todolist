@@ -174,7 +174,7 @@ a {
 .content h2 {
     margin-bottom: 30px;
     font-size: 24px;
-
+    align-self: center;
 }
 
 .content label {
