@@ -134,7 +134,7 @@ table {
 }
 
 body {
-    background-color: #FFD370;
+    background-color: #a0dbf8;
     font-weight: bolder;
     font-family: sans-serif;
 }
@@ -144,26 +144,10 @@ body {
 }
 
 .wrap {
-    margin: 0 auto;
-
+    margin: 50px auto;
     display: none;
     justify-content: center;
     align-items: center;
-}
-
-.pic {
-    margin: 90px;
-}
-
-.logo {
-    display: block;
-    padding-left: 40px;
-}
-
-.todolist {
-    display: block;
-
-    padding-top: 40px;
 }
 
 a {
@@ -178,7 +162,6 @@ a {
 }
 
 .login {
-
     height: 350px;
     color: #333333;
     display: none;
@@ -189,7 +172,6 @@ a {
 
 
 .content h2 {
-
     margin-bottom: 30px;
     font-size: 24px;
 
@@ -209,7 +191,7 @@ a {
 }
 
 .content .login p {
-    color: #D87355;
+    color: #d85555;
     font-size: 14px;
     margin-bottom: 10px;
 }
@@ -294,8 +276,8 @@ a {
 .wrap2 {
     height: 840px;
     background-image: linear-gradient(174deg,
-            #ffd370 2%,
-            #ffd370 46%,
+            #a0dbf8 2%,
+            #abdff9 46%,
             #ffffff 46%,
             #ffffff 100%,
             #e8e8e8 100%);
@@ -350,6 +332,7 @@ a {
     width: 500px;
     height: 50px;
     align-self: center;
+
 }
 
 .input .txt {
@@ -359,7 +342,7 @@ a {
     border: 0;
     border-radius: 15px;
     position: absolute;
-
+    box-shadow: 2px 5px 5px 2px #aaa
 }
 
 .input .btn_add {
@@ -388,7 +371,7 @@ a {
     color: #333333;
     margin-top: 20px;
     border-radius: 15px;
-
+    box-shadow: 2px 5px 5px 2px #aaa;
 }
 
 .container .card_list.active {

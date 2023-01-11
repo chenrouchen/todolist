@@ -1,19 +1,19 @@
 const apiUrl = 'https://todoo.5xcamp.us';
 //註冊
 const suBtn = document.querySelector('.btn2');
-const suemail = document.querySelector('#signupemail');
-const suname = document.querySelector('#name');
-const supasw = document.querySelector('#signuppassword');
-const supasw2 = document.querySelector('#password2');
+const inputEmail = document.querySelector('#signupemail');
+const inputName = document.querySelector('#name');
+const inputPasw = document.querySelector('#signuppassword');
+const inputPasw2 = document.querySelector('#password2');
 
 const emailRule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
 
 
 suBtn.addEventListener('click', function () {
-    let account = suemail.value;
-    let username = suname.value;
-    let userPasw = supasw.value;
-    let userPasw2 = supasw2.value;
+    let account = inputEmail.value;
+    let username = inputName.value;
+    let userPasw = inputPasw.value;
+    let userPasw2 = inputPasw2.value;
 
     if (account.search(emailRule) == -1) {
         alert('信箱錯誤,請重新輸入');
@@ -21,10 +21,14 @@ suBtn.addEventListener('click', function () {
         alert('請輸入您的暱稱')
     } else if (userPasw.length < 6) {
         alert('密碼需6碼以上,請重新輸入');
-    } else if (userPasw !== userPasw2) {
+    } else if (userPasw2 !== userPasw) {
         alert('密碼輸入錯誤,請重新輸入');
     } else if (account.search(emailRule) != -1 && userPasw.length >= 6 && userPasw === userPasw2) {
-        signUp(account, username, userPasw)
+        signUp(account, username, userPasw);
+        inputEmail.value = '';
+        inputName.value = '';
+        inputPasw.value = '';
+        inputPasw2.value = '';
     }
 
 })
@@ -76,7 +80,7 @@ function logIn(email, password) {
             getToDo();
 
         })
-        .catch(error => console.log(error))
+        .catch(error => alert(error.response.data.message))
 
 }
 const logInBtn = document.querySelector('.btn');
@@ -130,7 +134,7 @@ const list = document.querySelector('.list');
 
 list.addEventListener('click', function (e) {
     let listId = e.target.closest('li').dataset.id;
-    if (e.target.nodeName == 'UL') {
+    if (e.target.nodeName == 'UL' || e.target.getAttribute('type') === 'text') {
         return
     } else if (e.target.getAttribute('class') == 'delete') {
         deleteList(e);
@@ -187,7 +191,7 @@ function readerData(data) {
     </li>`
     });
     list.innerHTML = str;
-    num = data.length;
+    num = data.filter(i => i.checked === '').length;
     todoListNum.textContent = `${num}個待完成項目`;
 }
 
